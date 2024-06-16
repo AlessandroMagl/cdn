@@ -1,5 +1,54 @@
-<div class="overlay" id="overlay">
-    <img class="loader" src="https://raw.githubusercontent.com/AlessandroMglx/cdn/main/zampto/current/loader.svg" alt="Loading Animation">
-  </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zampto LOADER TEST</title>
+<link rel="stylesheet" href="loader-css.js">
 
-  <script src="loader-connect.js"></script>
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    overflow: hidden;
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    z-index: 9999;
+    display: none;
+  }
+
+  .loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.15);
+    z-index: 10000;
+  }
+</style>
+</head>
+<body>
+
+<div class="overlay" id="overlay">
+  <img class="loader" src="https://raw.githubusercontent.com/AlessandroMglx/cdn/main/zampto/current/loader.svg" alt="Loading Animation">
+</div>
+
+<p>ZAMPTO TEST 16/06/2024</p><br
+
+<a href="https://zampto.com">Go to Example.com (Link)</a><br>
+<button onclick="redirectTo('https://zampto.com')">(Button)</button>
+
+<script src="https://raw.githubusercontent.com/AlessandroMglx/cdn/main/zampto/current/loader-connect.js"></script>
+
+</body>
+</html>
