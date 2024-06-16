@@ -1,10 +1,20 @@
-document.getElementById('redirect-link').addEventListener('click', function(event) {
-    event.preventDefault();
-
+function redirectTo(url) {
     var overlay = document.getElementById('overlay');
     overlay.style.display = 'flex';
 
     setTimeout(function() {
-      window.location.href = event.target.href;
+      window.location.href = url;
     }, 1000);
+  }
+
+  document.addEventListener('click', function(event) {
+    var target = event.target;
+
+    var url = target.href || target.getAttribute('data-href');
+
+    if (url) {
+      event.preventDefault();
+
+      redirectTo(url);
+    }
   });
